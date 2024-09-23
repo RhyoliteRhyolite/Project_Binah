@@ -1,29 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
-    float hAxis;
-    float vAxis;
+    Rigidbody rb;
+    float speed = 10f;
 
-    Vector3 moveVec;
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        hAxis = Input.GetAxisRaw("Horizontal");
-        vAxis = Input.GetAxisRaw("Vertical");
+        float xMove = Input.GetAxis("Horizontal");
+        float zMove = Input.GetAxis("Vertical");
 
-        moveVec = new Vector3(hAxis, 0, vAxis).normalized;
-
-        transform.position += moveVec * speed * Time.deltaTime;
+        Vector3 getVel = new Vector3(xMove, 0, zMove) * speed;
+        rb.velocity = getVel;
     }
 }
+

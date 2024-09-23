@@ -577,7 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa49d9178d6c87d48aac64a056b67f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
 --- !u!136 &1525540230
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -606,7 +605,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 90
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!1 &1592528930
 GameObject:
