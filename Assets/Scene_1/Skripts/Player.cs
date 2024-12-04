@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
         float zMove = Input.GetAxis("Vertical");
 
         Vector3 getVel = new Vector3(xMove, 0, zMove) * speed;
-        rb.velocity = getVel;
+        rb.linearVelocity = getVel;
     }
 }
 
